@@ -67,10 +67,10 @@ document.getElementById('downloadPDF').addEventListener('click', () => {
     // PDFにユーザー情報とQRコードを追加
     doc.text(`Wakeup and Bedtime Records for ${username}`, 10, 10);
     doc.text(`ID: ${uniqueId}`, 10, 20);
-    doc.addImage(qrDataURL, 'PNG', 10, 30, 50, 50);
+    doc.addImage(qrDataURL, 'PNG', 150, 10, 50, 50);
 
     // 記録をPDFに追加
-    let y = 90;
+    let y = 40;
     records.forEach(record => {
         doc.text(`${record.type}: ${record.time}`, 10, y);
         y += 10;
