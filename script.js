@@ -49,7 +49,7 @@ document.getElementById('downloadPDF').addEventListener('click', () => {
 
     // 一意のIDを生成
     const uniqueId = Date.now();
-    
+
     // QRコードのデータを生成
     const qrData = `User: ${username}, ID: ${uniqueId}`;
     console.log(qrData);  // QRコードの内容をコンソールに出力
@@ -62,7 +62,7 @@ document.getElementById('downloadPDF').addEventListener('click', () => {
 
     // QRコードのデータURLを取得して検証
     const qrDataURL = qr.toDataURL();
-    console.log(qrDataURL);
+    console.log(qrDataURL); // データURLをコンソールに出力
 
     // PDFにユーザー情報とQRコードを追加
     doc.text(`Wakeup and Bedtime Records for ${username}`, 10, 10);
