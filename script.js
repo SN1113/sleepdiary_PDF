@@ -67,7 +67,7 @@ document.getElementById('downloadPDF').addEventListener('click', () => {
     // PDFにユーザー情報とQRコードを追加
     doc.text(`Wakeup and Bedtime Records for ${username}`, 10, 10);
     doc.text(`ID: ${uniqueId}`, 10, 20);
-    doc.addImage(qrDataURL, 'PNG', 150, 10, 50, 50);
+    doc.addImage(qrDataURL, 'PNG', 150, 10, 30, 30);  // QRコードを右側に配置し、小さくする
 
     // 記録をPDFに追加
     let y = 40;
